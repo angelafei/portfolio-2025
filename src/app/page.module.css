@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+TAS+Beginner:wght@400..700&display=swap');
+
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -6,14 +8,15 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
+  /* display: grid; */
+  /* grid-template-rows: 20px 1fr 20px; */
+  /* align-items: center; */
+  /* justify-items: center; */
   min-height: 100svh;
-  padding: 80px;
+  /* padding: 80px; */
   gap: 64px;
   font-family: var(--font-geist-sans);
+  padding-bottom: 36px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,7 +30,81 @@
   }
 }
 
-.main {
+/* 導航欄樣式 */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.98);
+  padding: 0.8rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+.nav-links li {
+  width: 75px;
+  cursor: pointer;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/*.main {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -54,9 +131,362 @@
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
+}*/
+
+/* 主要內容區域 */
+/* .main {
+  margin-top: 100px;
+} */
+
+.section {
+  padding: 6rem 0;
+  background-color: var(--white);
 }
 
-.ctas {
+.section:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/*h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}*/
+
+/* 關於我區域 */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+/* test */
+.rainbow-circle {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg,
+      #fce4ec,  /* 極淡粉紅 */
+      #fff3e0,  /* 極淡橙 */
+      #fffde7,  /* 極淡黃 */
+      #f1f8e9,  /* 極淡綠 */
+      #e3f2fd,  /* 極淡藍 */
+      #f3e5f5,  /* 極淡靛 */
+      #fce4ec   /* 回到極淡粉紅，形成完整循環 */
+  );
+  margin: 10px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  position: relative;
+  padding: 10px;
+}
+
+.image-container {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* test end */
+
+.avatar {
+  display: flex;
+  /* width: 100%; */
+  justify-content: center;
+}
+
+.avatar img {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.caveat {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+}
+
+.edu-tas-beginner {
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.about-name {
+  font-size: 88px;
+  font-weight: 700;
+}
+
+.about-intro {
+  width: 620px;
+  margin: 0 auto;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+
+.about-intro + .about-intro {
+  margin-top: 42px;
+}
+
+/* 作品展示區域 */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.portfolio-item {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-image {
+  width: 100%;
+  padding-top: 66%;
+  position: relative;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+
+.portfolio-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.05);
+}
+
+.portfolio-info {
+  padding: 1.5rem;
+}
+
+.portfolio-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* 聯絡表單 */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+/* 響應式設計 */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  /* z-index: 1001; */
+}
+
+ .menu-toggle span {
+  /* display: none; */
+  width: 25px;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: 0.3s ease;
+  transform-origin: center;
+}
+
+/* ✅ 加入動畫轉成 X 的效果 */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/*
+.active span {
+  display: block;
+} */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: flex;
+  }
+
+  /* .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--white);
+      padding: 1rem 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.active {
+      display: flex;
+  } */
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100px; /* 根據你 header 的高度微調 */
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 1rem 0;
+    gap: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    max-height: 500px; /* 足夠展示全部選單 */
+    opacity: 1;
+  }
+
+  .about-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+
+  .about-name {
+    font-size: 48px;
+  }
+
+  .about-intro {
+    width: 360px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .about-intro + .about-intro {
+    margin-top: 30px;
+  }
+
+  /*h1 {
+      font-size: 2.5rem;
+  }*/
+
+  .portfolio-grid {
+      grid-template-columns: 1fr;
+  }
+} 
+
+/*.ctas {
   display: flex;
   gap: 16px;
 }
@@ -106,10 +536,10 @@ a.secondary {
 
 .footer img {
   flex-shrink: 0;
-}
+}*/
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
+/*@media (hover: hover) and (pointer: fine) {
   a.primary:hover {
     background: var(--button-primary-hover);
     border-color: transparent;
@@ -165,4 +595,4 @@ a.secondary {
   .logo {
     filter: invert();
   }
-}
+}*/

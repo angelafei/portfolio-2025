@@ -1,95 +1,80 @@
-import Image from "next/image";
+"use client"; // This is a client component
+
+import { useState, useEffect } from 'react';
+// import Image from "next/image";
 import styles from "./page.module.css";
+import TagCloud from './tagCloud';
+import PortfolioCarousel from './portfolioCarousel';
+import Footer from './footer';
 
 export default function Home() {
+  const [isHovered, setIsHovered] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMouseEnter = (e, index) => {
+    // console.log('e:',e.target);
+    // console.log('index:', index);
+    setIsHovered(index);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(0);
+  };
+
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <nav className={styles.navbar}>
+        <div className={styles['nav-content']}>
+            <a href="#" className={styles['logo-container']}>
+                <img 
+                  src="/logo_new.png" 
+                  alt="Portfolio Logo"
+                  className={styles.logo} 
+                />
+            </a>
+            <ul className={`${styles['nav-links']} ${menuOpen ? styles.active : ''}`}>
+                <li onMouseEnter={(event) => handleMouseEnter(event, 1)} onMouseLeave={handleMouseLeave}>
+                  <a href="#about" className={styles.active}>{ isHovered === 1 ? '關於我' : 'About Me' }</a>
+                </li>
+                <li onMouseEnter={(event) => handleMouseEnter(event, 2)} onMouseLeave={handleMouseLeave}>
+                  <a href="#portfolio">{ isHovered  === 2 ? '作品展示' : 'Portfolio' }</a>
+                </li>
+                <li onMouseEnter={(event) => handleMouseEnter(event, 3)} onMouseLeave={handleMouseLeave}>
+                  <a href="mailto:future2931@gmail.com">{ isHovered  === 3 ? '聯絡我' : 'Contact' }</a>
+                </li>
+            </ul>
+            <div className={`${styles['menu-toggle']} ${menuOpen ? styles.open : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+      </nav>
+
+      <main className={styles.main}>
+          <section id="about" className={styles.section}>
+              <div className={styles.container}>
+                  <div className={styles['about-content']}>
+                      <div className={styles['about-text']}>
+                        <p className={[styles['about-name'], styles.caveat].join(' ')}>Hello, I&#39;m Angela Fei</p>
+                        <p className={[styles['about-intro'], styles['edu-tas-beginner']].join(' ')}>Front-end developer who loves crafting things both digitally and by hand — inspired by thoughtful design <br /> and the quiet power of simplicity.</p>
+                        {/*<p className={[styles['about-intro'], styles['edu-tas-beginner']].join(' ')}>Front-end developer who finds inspiration in handmade crafts, <br /> thoughtful design, and the quiet power of simplicity. </p>*/}
+                        <p className={[styles['about-intro'], styles['edu-tas-beginner']].join(' ')}>Shaped by years of working across cultures and countries. <br /> Now exploring new creative directions beyond code.</p>
+                      </div>
+                      <div className={[styles.avatar, styles['rainbow-circle']].join(' ')}>
+                        <div className={styles['image-container']}>
+                          <img src="/avatar2.png" alt="avatar" className={styles['circle-image']} />
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <TagCloud />
+
+          <PortfolioCarousel />
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat&amp;display=swap');
+text {
+  font-family: 'Caveat', cursive;
+}
+</style>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="48" fill="#333333">Hello, I'm Angela Fei</text>
+</svg>

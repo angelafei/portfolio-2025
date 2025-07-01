@@ -1,0 +1,208 @@
+/* .about-tags {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #f7faff;
+}
+
+.tag-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-family: 'Quicksand', sans-serif;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  cursor: default;
+  transform: translateY(0);
+}
+
+.tag {
+  transition: transform 0.2s ease;
+}
+.tag:hover {
+  animation: bubbleUp 0.6s ease-out;
+}
+
+@keyframes bubbleUp {
+  0%   { transform: translateY(0); opacity: 1; }
+  50%  { transform: translateY(-8px); opacity: 0.9; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.tag-blue     { background-color: #d6eaff; }
+.tag-pink     { background-color: #ffe2e6; }
+.tag-yellow   { background-color: #fff6c2; }
+.tag-green    { background-color: #e4fce4; }
+.tag-lavender { background-color: #ede7f6; }
+.tag-mint     { background-color: #d9f8f1; }
+.tag-peach    { background-color: #ffe8d2; }
+.tag-sky      { background-color: #e3f2fd; }
+.tag-beige    { background-color: #f9f1e7; } */
+
+.tag-cloud-section {
+  padding: 3rem 1rem;
+  background-color: #f9fcff;
+  /* border-radius: 1rem; */
+}
+
+.tags-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tag-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.tag-group-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tag-group {
+  min-width: 200px;
+}
+
+.tag-group-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #6c7a89;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.tag-badge {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  background-color: #e6f0fa;
+  color: #336699;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  cursor: default;
+}
+
+.tag-badge:hover {
+  background-color: #cfeaff;
+  transform: scale(1.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.badge-yellow {
+  background-color: #FDF6E3;
+  color: #5C4B00;
+}
+
+.badge-yellow:hover {
+  background-color: #F6E9C4;
+}
+
+.badge-mint {
+  background-color: #D8F3DC;
+  color: #2E5941;
+}
+
+.badge-mint:hover {
+  background-color: #C0EACB;
+}
+
+.badge-blue {
+  background-color: #D6EAF8;
+  color: #2A4F73;
+}
+
+.badge-blue:hover {
+  background-color: #C3DFF4;
+}
+
+.badge-pink {
+  background-color: #FADADD;
+  color: #7A3D3D;
+}
+
+.badge-pink:hover {
+  background-color: #F6C4C8;
+}
+
+.badge-green {
+  background-color: #E9F5DB;
+  color: #4C5C36;
+}
+
+.badge-green:hover {
+  background-color: #DCEFC4;
+}
+
+.badge-purple {
+  background-color: #EAE6F8;
+  color: #4E3D73;
+}
+
+.badge-purple:hover {
+  background-color: #DCD6F2;
+}
+
+.badge-orange {
+  background-color: #FFE9CC;
+  color: #805C2B;
+}
+
+.badge-orange:hover {
+  background-color: #FFE0B8;
+}
+
+.badge-greyblue {
+  background-color: #E4ECF1;
+  color: #3B5467;
+}
+
+.badge-greyblue:hover {
+  background-color: #D0DCE5;
+}
+
+.badge-beige {
+  background-color: #F5F5DC;
+  color: #5A4E3C;
+}
+
+.badge-beige:hover {
+  background-color: #ECECD0;
+}
+
+.badge-peach {
+  background-color: #FFE0DC;
+  color: #994D3F;
+}
+
+.badge-peach:hover {
+  background-color: #FFD1CA;
+}
+
