@@ -33,13 +33,13 @@ export default function Home() {
                 />
             </a>
             <ul className={`${styles['nav-links']} ${menuOpen ? styles.active : ''}`}>
-                <li onMouseEnter={(event) => handleMouseEnter(event, 1)} onMouseLeave={handleMouseLeave}>
+                <li onMouseEnter={(event) => handleMouseEnter(event, 1)} onMouseLeave={handleMouseLeave} onClick={() => setMenuOpen(!menuOpen)}>
                   <a href="#about" className={styles.active}>{ isHovered === 1 ? '關於我' : 'About Me' }</a>
                 </li>
-                <li onMouseEnter={(event) => handleMouseEnter(event, 2)} onMouseLeave={handleMouseLeave}>
+                <li onMouseEnter={(event) => handleMouseEnter(event, 2)} onMouseLeave={handleMouseLeave} onClick={() => setMenuOpen(!menuOpen)}>
                   <a href="#portfolio">{ isHovered  === 2 ? '作品展示' : 'Portfolio' }</a>
                 </li>
-                <li onMouseEnter={(event) => handleMouseEnter(event, 3)} onMouseLeave={handleMouseLeave}>
+                <li onMouseEnter={(event) => handleMouseEnter(event, 3)} onMouseLeave={handleMouseLeave} onClick={() => setMenuOpen(!menuOpen)}>
                   <a href="mailto:future2931@gmail.com">{ isHovered  === 3 ? '聯絡我' : 'Contact' }</a>
                 </li>
             </ul>

@@ -435,11 +435,11 @@ h2 {
   } */
 
   .nav-links {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 100px; /* 根據你 header 的高度微調 */
+    top: 108px; /* 根據你 header 的高度微調 */
     left: 0;
     width: 100%;
     background-color: var(--white);
@@ -454,6 +454,7 @@ h2 {
   }
 
   .nav-links.active {
+    display: flex;
     max-height: 500px; /* 足夠展示全部選單 */
     opacity: 1;
   }
@@ -480,6 +481,21 @@ h2 {
   /*h1 {
       font-size: 2.5rem;
   }*/
+
+  .rainbow-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .image-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .avatar img {
+    width: 280px;
+    height: 280px;
+  }
 
   .portfolio-grid {
       grid-template-columns: 1fr;

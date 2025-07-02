@@ -1,0 +1,152 @@
+/* [project]/src/app/tagCloud.css [app-client] (css) */
+.tag-cloud-section {
+  background-color: #f9fcff;
+  padding: 3rem 1rem;
+}
+
+.tags-wrapper {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tag-title {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.tag-group-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  display: flex;
+}
+
+.tag-group {
+  min-width: 200px;
+}
+
+.tag-group-title {
+  color: #6c7a89;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.tag-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+  display: flex;
+}
+
+.tag-badge {
+  color: #369;
+  cursor: default;
+  background-color: #e6f0fa;
+  border-radius: 999px;
+  padding: .4rem .8rem;
+  font-size: .85rem;
+  transition: all .3s;
+  box-shadow: 0 1px 3px #00000014;
+}
+
+.tag-badge:hover {
+  background-color: #cfeaff;
+  transform: scale(1.1);
+  box-shadow: 0 2px 6px #00000026;
+}
+
+.badge-yellow {
+  color: #5c4b00;
+  background-color: #fdf6e3;
+}
+
+.badge-yellow:hover {
+  background-color: #f6e9c4;
+}
+
+.badge-mint {
+  color: #2e5941;
+  background-color: #d8f3dc;
+}
+
+.badge-mint:hover {
+  background-color: #c0eacb;
+}
+
+.badge-blue {
+  color: #2a4f73;
+  background-color: #d6eaf8;
+}
+
+.badge-blue:hover {
+  background-color: #c3dff4;
+}
+
+.badge-pink {
+  color: #7a3d3d;
+  background-color: #fadadd;
+}
+
+.badge-pink:hover {
+  background-color: #f6c4c8;
+}
+
+.badge-green {
+  color: #4c5c36;
+  background-color: #e9f5db;
+}
+
+.badge-green:hover {
+  background-color: #dcefc4;
+}
+
+.badge-purple {
+  color: #4e3d73;
+  background-color: #eae6f8;
+}
+
+.badge-purple:hover {
+  background-color: #dcd6f2;
+}
+
+.badge-orange {
+  color: #805c2b;
+  background-color: #ffe9cc;
+}
+
+.badge-orange:hover {
+  background-color: #ffe0b8;
+}
+
+.badge-greyblue {
+  color: #3b5467;
+  background-color: #e4ecf1;
+}
+
+.badge-greyblue:hover {
+  background-color: #d0dce5;
+}
+
+.badge-beige {
+  color: #5a4e3c;
+  background-color: beige;
+}
+
+.badge-beige:hover {
+  background-color: #ececd0;
+}
+
+.badge-peach {
+  color: #994d3f;
+  background-color: #ffe0dc;
+}
+
+.badge-peach:hover {
+  background-color: #ffd1ca;
+}
+
+/*# sourceMappingURL=src_app_tagCloud_css_f9ee138c._.single.css.map*/

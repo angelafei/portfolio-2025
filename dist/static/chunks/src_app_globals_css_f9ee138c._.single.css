@@ -1,0 +1,35 @@
+/* [project]/src/app/globals.css [app-client] (css) */
+:root {
+  --primary-color: #cfeaff;
+  --secondary-color: #f5f9fc;
+  --text-color: #2c3e50;
+  --accent-color: #3498db;
+  --hover-color: #2980b9;
+  --light-gray: #ecf0f1;
+  --white: #fff;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--white);
+  font-family: Inter, SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=src_app_globals_css_f9ee138c._.single.css.map*/

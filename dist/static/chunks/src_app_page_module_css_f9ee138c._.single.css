@@ -1,0 +1,391 @@
+/* [project]/src/app/page.module.css [app-client] (css) */
+.page-module___8aEwW__page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), .08);
+  --gray-alpha-100: rgba(var(--gray-rgb), .05);
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  min-height: 100svh;
+  font-family: var(--font-geist-sans);
+  gap: 64px;
+  padding-bottom: 36px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page-module___8aEwW__page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), .145);
+    --gray-alpha-100: rgba(var(--gray-rgb), .06);
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+.page-module___8aEwW__navbar {
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: #fffffffa;
+  border-bottom: 1px solid #0000000d;
+  width: 100%;
+  padding: .8rem 0;
+  position: fixed;
+  top: 0;
+}
+
+.page-module___8aEwW__nav-content {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+}
+
+.page-module___8aEwW__logo-container {
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+.page-module___8aEwW__logo {
+  width: auto;
+  height: 100px;
+  display: block;
+}
+
+.page-module___8aEwW__logo:hover {
+  transform: scale(1.05);
+}
+
+.page-module___8aEwW__nav-links {
+  gap: 3rem;
+  list-style: none;
+  display: flex;
+}
+
+.page-module___8aEwW__nav-links li {
+  cursor: pointer;
+  width: 75px;
+}
+
+.page-module___8aEwW__nav-links a {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .3s;
+  position: relative;
+}
+
+.page-module___8aEwW__nav-links a:after {
+  content: "";
+  background-color: var(--accent-color);
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.page-module___8aEwW__nav-links a:hover:after, .page-module___8aEwW__nav-links a.page-module___8aEwW__active:after {
+  width: 100%;
+}
+
+.page-module___8aEwW__section {
+  background-color: var(--white);
+  padding: 6rem 0;
+}
+
+.page-module___8aEwW__section:nth-child(2n) {
+  background-color: var(--secondary-color);
+}
+
+.page-module___8aEwW__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-module___8aEwW__about-content {
+  flex-flow: column;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 3rem;
+  display: flex;
+}
+
+.page-module___8aEwW__rainbow-circle {
+  background: conic-gradient(#fce4ec, #fff3e0, #fffde7, #f1f8e9, #e3f2fd, #f3e5f5, #fce4ec);
+  border-radius: 50%;
+  width: 380px;
+  height: 380px;
+  margin: 10px auto;
+  padding: 10px;
+  position: relative;
+  box-shadow: 0 10px 30px #0000000d;
+}
+
+.page-module___8aEwW__image-container {
+  background: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px #0000000d;
+}
+
+.page-module___8aEwW__circle-image {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.page-module___8aEwW__avatar {
+  justify-content: center;
+  display: flex;
+}
+
+.page-module___8aEwW__avatar img {
+  border: 6px solid #fff;
+  border-radius: 50%;
+  width: 360px;
+  height: 360px;
+}
+
+.page-module___8aEwW__about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.page-module___8aEwW__caveat {
+  font-optical-sizing: auto;
+  text-align: center;
+  font-family: Caveat, cursive;
+  font-style: normal;
+}
+
+.page-module___8aEwW__edu-tas-beginner {
+  font-optical-sizing: auto;
+  font-family: Edu TAS Beginner, cursive;
+  font-style: normal;
+}
+
+.page-module___8aEwW__about-name {
+  font-size: 88px;
+  font-weight: 700;
+}
+
+.page-module___8aEwW__about-intro {
+  text-align: center;
+  width: 620px;
+  margin: 0 auto;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.page-module___8aEwW__about-intro + .page-module___8aEwW__about-intro {
+  margin-top: 42px;
+}
+
+.page-module___8aEwW__portfolio-grid {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+  display: grid;
+}
+
+.page-module___8aEwW__portfolio-item {
+  background: var(--white);
+  border-radius: 12px;
+  transition: all .3s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #0000000d;
+}
+
+.page-module___8aEwW__portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px #0000001a;
+}
+
+.page-module___8aEwW__portfolio-image {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding-top: 66%;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-module___8aEwW__portfolio-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform .5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-module___8aEwW__portfolio-item:hover .page-module___8aEwW__portfolio-image img {
+  transform: scale(1.05);
+}
+
+.page-module___8aEwW__portfolio-info {
+  padding: 1.5rem;
+}
+
+.page-module___8aEwW__portfolio-info h3 {
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.page-module___8aEwW__contact-form {
+  background: var(--white);
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  box-shadow: 0 5px 15px #0000000d;
+}
+
+.page-module___8aEwW__form-group {
+  margin-bottom: 1.5rem;
+}
+
+.page-module___8aEwW__input, .page-module___8aEwW__textarea {
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  transition: border-color .3s;
+}
+
+.page-module___8aEwW__input:focus, .page-module___8aEwW__textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.page-module___8aEwW__textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.page-module___8aEwW__button {
+  background-color: var(--accent-color);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+.page-module___8aEwW__button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+.page-module___8aEwW__menu-toggle {
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  display: none;
+}
+
+.page-module___8aEwW__menu-toggle span {
+  background-color: var(--text-color);
+  transform-origin: center;
+  width: 25px;
+  height: 2px;
+  transition: all .3s;
+}
+
+.page-module___8aEwW__menu-toggle.page-module___8aEwW__open span:first-child {
+  transform: rotate(45deg)translate(6px, 6px);
+}
+
+.page-module___8aEwW__menu-toggle.page-module___8aEwW__open span:nth-child(2) {
+  opacity: 0;
+}
+
+.page-module___8aEwW__menu-toggle.page-module___8aEwW__open span:nth-child(3) {
+  transform: rotate(-45deg)translate(6px, -6px);
+}
+
+@media (width <= 768px) {
+  .page-module___8aEwW__menu-toggle {
+    display: flex;
+  }
+
+  .page-module___8aEwW__nav-links {
+    background-color: var(--white);
+    opacity: 0;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-height: 0;
+    padding: 1rem 0;
+    transition: max-height .3s, opacity .3s;
+    display: none;
+    position: absolute;
+    top: 108px;
+    left: 0;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #0000000d;
+  }
+
+  .page-module___8aEwW__nav-links.page-module___8aEwW__active {
+    opacity: 1;
+    max-height: 500px;
+    display: flex;
+  }
+
+  .page-module___8aEwW__about-content {
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+
+  .page-module___8aEwW__about-name {
+    font-size: 48px;
+  }
+
+  .page-module___8aEwW__about-intro {
+    width: 360px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .page-module___8aEwW__about-intro + .page-module___8aEwW__about-intro {
+    margin-top: 30px;
+  }
+
+  .page-module___8aEwW__rainbow-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .page-module___8aEwW__image-container, .page-module___8aEwW__avatar img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .page-module___8aEwW__portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=src_app_page_module_css_f9ee138c._.single.css.map*/
