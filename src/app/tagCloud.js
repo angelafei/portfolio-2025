@@ -79,7 +79,7 @@ const tagGroups = [
   {
     title: 'Other Development Tools',
     style: 'badge-green',
-    tags: ['Gulp', 'Git', 'Webpack', 'turbopack', 'Babel', 'Apps Script']
+    tags: ['Gulp', 'Git', 'Webpack', 'turbopack', 'Babel', 'Apps Script', 'GTM']
   },
   {
     title: 'Other Tools',
